@@ -1,4 +1,7 @@
-# scripts
-![GitHub License](https://img.shields.io/github/license/sebastian-j-ibanez/scripts?color=blue)
+# Scripts
 
 A collection of shell scripts for Linux.
+| Name | Description |
+|--|--|
+| clone | Clone Git repositories using SSH. |
+| flip | Switch between light and dark themes in ghostty and helix. |

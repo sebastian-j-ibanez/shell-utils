@@ -1,0 +1,6 @@
+[submodule "flip"]
+	path = flip
+	url = git@github.com:sebastian-j-ibanez/flip
+[submodule "clone"]
+	path = clone
+	url = git@github.com:sebastian-j-ibanez/clone

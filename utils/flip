@@ -16,7 +16,7 @@ HELIX_LIGHT="cyan_light"
 usage() {
   echo "Switch between light and dark mode in Ghostty and Helix."
   echo
-  echo "Usage: flip.sh [dark|light]"
+  echo "Usage: flip [dark|light]"
   exit 1
 }
 

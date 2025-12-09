@@ -1,0 +1,42 @@
+#! /usr/bin/zsh
+
+# resume
+#   Suspended process picker.
+#
+# Note:
+#   This script must be run by sourcing the file,
+#   otherwise it will not have access to the
+#   existing shell processes. 
+#
+# Example usage:
+#   1. Add alias to ~/.zshrc:
+#     alias resume='. ~/local/.bin/resume'
+#
+#   2. In a zsh shell:
+#     $ resume
+
+job_array=()
+while read -r line; do
+  if [[ $line =~ '^\[([0-9]+)\]\s+[+-]?\s+[a-z]+(\s+\([^)]+\))?\s+(.*)$' ]]; then
+    num=$match[1]
+    cmd=$match[3]
+    job_array+=("$num $cmd")
+  fi
+done < <(jobs)
+
+if [[ ${#job_array[@]} -eq 0 ]]; then
+  echo "No suspended jobs"
+  exit 0
+fi
+
+selected=$(printf '%s\n' "${job_array[@]}" | gum choose \
+  --header="Jobs:" \
+  --cursor.foreground="" \
+  --selected.foreground="" \
+  --item.foreground="" \
+  --header.foreground="")
+
+if [[ -n $selected ]]; then
+  num=$(echo $selected | cut -d' ' -f1)
+  fg %$num
+fi

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-# Switch between light and dark mode themes in Ghostty and Helix. 
-
-# Expects the following environment variables:
-# 
-# GHOSTTY_CONFIG - Path to ghostty config directory.
-# GHOSTTY_DARK   - Name of ghostty dark theme.
-# GHOSTTY_LIGHT  - Name OF ghostty light theme.
-# 
-# HELIX_CONFIG   - Path to helix config directory.
-# HELIX_DARK     - Name of helix dark theme.
-# HELIX_LIGHT    - Name of helix light theme.
+# flip
+#   Switch between light and dark mode themes in Ghostty and Helix. 
+#
+# Note:
+#   The following environment variables must be set:
+#     GHOSTTY_CONFIG - Path to ghostty config directory.
+#     GHOSTTY_DARK   - Name of ghostty dark theme.
+#     GHOSTTY_LIGHT  - Name OF ghostty light theme.
+#     HELIX_CONFIG   - Path to helix config directory.
+#     HELIX_DARK     - Name of helix dark theme.
+#     HELIX_LIGHT    - Name of helix light theme.
 
 SETTING="theme = "
 

@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 
-# SSH Git clone utility.
-# Expects $GIT_USERNAME to be set.
+# clone
+#   SSH Git clone utility.
+#
+# Note:
+#   Expects $GIT_USERNAME to be set.
 
 if [[ -z "${GIT_USERNAME}" ]]; then
     echo "error: \$GIT_USERNAME is not set." >&2

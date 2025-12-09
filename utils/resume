@@ -26,7 +26,7 @@ done < <(jobs)
 
 if [[ ${#job_array[@]} -eq 0 ]]; then
   echo "No suspended jobs"
-  exit 0
+  return 0
 fi
 
 selected=$(printf '%s\n' "${job_array[@]}" | gum choose \

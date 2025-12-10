@@ -14,11 +14,15 @@
 
 SETTING="theme = "
 
-# Print usage.
 usage() {
-  echo "Switch between light and dark mode in Ghostty and Helix."
-  echo
-  echo "Usage: flip [dark|light]"
+  echo "Usage: flip <mode>"
+  echo ""
+  echo "Modes:"
+  echo "  dark     Switch to dark theme"
+  echo "  light    Switch to light theme"
+  echo ""
+  echo "Note: Requires GHOSTTY_CONFIG, GHOSTTY_DARK, GHOSTTY_LIGHT,"
+  echo "      HELIX_CONFIG, HELIX_DARK, and HELIX_LIGHT to be set."
   exit 1
 }
 

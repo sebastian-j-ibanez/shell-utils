@@ -11,10 +11,14 @@ if [[ -z "${GIT_USERNAME}" ]]; then
     exit 1
 fi
 
-print_usage() {
-    echo "clone - a git ssh clone utility\n"
-    echo "Expects \$GIT_USERNAME to be set.\n"
-    echo "Usage:\n\tclone <repo name>"
+usage() {
+    echo "Usage: clone <repo> [directory]"
+    echo ""
+    echo "Arguments:"
+    echo "  repo         Repository name to clone"
+    echo "  directory    Optional target directory"
+    echo ""
+    echo "Note: Requires \$GIT_USERNAME to be set."
 }
 
 case $# in
@@ -25,6 +29,6 @@ case $# in
         git clone git@github.com:${GIT_USERNAME}/$1 $2
     ;;
     *) 
-        print_usage
+        usage
     ;;
 esac

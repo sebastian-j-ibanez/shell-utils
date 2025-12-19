@@ -47,7 +47,7 @@ case $command in
 
     selected=$(printf '%s\n' "${job_array[@]}" | gum choose \
       --header="$command job:" \
-      --cursor.foreground="" \
+      --cursor.foreground="#98C379" \
       --selected.foreground="" \
       --item.foreground="" \
       --header.foreground="")

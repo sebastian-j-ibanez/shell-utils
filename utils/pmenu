@@ -57,7 +57,7 @@ case $command in
       if [[ $command == "resume" ]]; then
         fg %$num
       else
-        kill %$num
+        kill -kill %$num
       fi
     else
       return 1

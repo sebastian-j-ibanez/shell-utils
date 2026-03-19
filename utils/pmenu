@@ -41,16 +41,16 @@ case $command in
     done < <(jobs)
     
     if [[ ${#job_array[@]} -eq 0 ]]; then
-      echo "No suspended jobs"
+      echo -e "\e[33mNo suspended jobs\e[0m"
       return 0
     fi
 
     selected=$(printf '%s\n' "${job_array[@]}" | gum choose \
       --header="$command job:" \
-      --cursor.foreground="#98C379" \
-      --selected.foreground="" \
-      --item.foreground="" \
-      --header.foreground="")
+      --cursor.foreground="2" \
+      --selected.foreground="2" \
+      --item.foreground="7" \
+      --header.foreground="4")
     
     if [[ -n $selected ]]; then
       num=${selected%% *}
